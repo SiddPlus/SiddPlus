@@ -3,9 +3,9 @@
 
 First-class Games Development graduate from the University for the Creative Arts specializing in high-performance Unreal Engine 5 (C++) and networked multiplayer architecture. Experienced in designing modular component-driven frameworks, server-client replication, and scalable cloud backends via AWS. Adept at bridging technical systems design with multi-disciplinary production timelines—from rapid prototyping to final outcome.
 
-[Watch](https://www.youtube.com/embed/c51VBGlofx0?si=tuZV1aIdwmRSkHsF)
+[Watch Gameplay Trailer for Evolved Survivors](https://www.youtube.com/embed/c51VBGlofx0?si=tuZV1aIdwmRSkHsF)
 
-[Play]( https://siddplus.itch.io/evolved-survivors)
+[Play Evolved Survivors]( https://siddplus.itch.io/evolved-survivors)
 
 ```cpp
 void ATheGameMode::StartRound()
