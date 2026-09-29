@@ -7,42 +7,6 @@ First-class Games Development graduate from the University for the Creative Arts
 
 [Play Evolved Survivors]( https://siddplus.itch.io/evolved-survivors)
 
-#### Code Snippet from Evolved Survivors' StartRound() Function in Gamemode
-
-```cpp
-void ATheGameMode::StartRound()
-{
-    ATheGameState* GS = GetGameState<ATheGameState>();
-    if (!GS) return;
-
-    if (GS->CurrentRoundNumber == 1)
-    {
-        GS->bIsRunActive = true;
-    }
-
-    TArray<AActor*> FoundSpawners;
-    UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemySpawner::StaticClass(), FoundSpawners);
-    for (AActor* Actor : FoundSpawners)
-    {
-        if (AEnemySpawner* Spawner = Cast<AEnemySpawner>(Actor))
-            CachedSpawners.Add(Spawner);
-    }
-
-    GS->RoundTimer = BaseRoundDuration;
-    GS->bIsRoundActive = true;
-    GS->OnRep_IsRoundActive();
-
-    for (AEnemySpawner* Spawner : CachedSpawners)
-    {
-        Spawner->ConfigureSpawner(CurrentRoundSpawnRate, CurrentRoundMaxEnemies, TargetHealthMult, TargetSpeedMult);
-        Spawner->StartSpawningTimer();
-    }
-
-    GetWorldTimerManager().SetTimer(RoundTimerHandle, this, &ATheGameMode::AdvanceTimer, 1.0f, true);
-}
-
-```
-
 Learn more about me: https://siddplus.github.io/Portfolio-Website/
 
 Contact me: sidd.ghosalkar@outlook.com
